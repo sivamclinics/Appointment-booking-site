@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MediCare Clinic — Book an Appointment</title>
+<meta name="description" content="Book your appointment at MediCare Clinic online. Fast, easy, and secure appointment scheduling."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="10" fill="#0F6E56"/>
+          <path d="M20 8h-4v8H8v4h8v8h4v-8h8v-4h-8V8z" fill="white"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">MediCare Clinic</span>
+        <span class="logo-tagline">Healthcare &amp; Wellness Centre</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="#services-section" class="nav-link">Services</a>
+      <a href="#about-section" class="nav-link">About</a>
+      <a href="#contact-section" class="nav-link">Contact</a>
+      <a href="admin.html" class="nav-link nav-admin">
+        <span class="admin-dot"></span>Clinic Manager
+      </a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#services-section" class="nav-link" onclick="closeMobileNav()">Services</a>
+    <a href="#about-section" class="nav-link" onclick="closeMobileNav()">About</a>
+    <a href="#contact-section" class="nav-link" onclick="closeMobileNav()">Contact</a>
+    <a href="admin.html" class="nav-link nav-admin">Clinic Manager</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Accepting New Patients — Book Today
+      </div>
+      <h1 class="hero-title">Your Health,<br/><em>Our Priority</em></h1>
+      <p class="hero-subtitle">Book your appointment in minutes — no waiting on hold, no paperwork. Choose your service, pick a time that suits you, and we'll take care of the rest.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Years of Care</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">8,000+</span><span class="stat-label">Happy Patients</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">12</span><span class="stat-label">Specialists</span></div>
+      </div>
+      <a href="#booking-section" class="btn-hero">Book an Appointment ↓</a>
+    </div>
+    <div class="hero-card-float">
+      <div class="float-card">
+        <div class="float-card-icon">✓</div>
+        <div class="float-card-text">
+          <strong>Instant Confirmation</strong>
+          <span>WhatsApp notification sent immediately</span>
+        </div>
+      </div>
+      <div class="float-card">
+        <div class="float-card-icon">🔒</div>
+        <div class="float-card-text">
+          <strong>Secure &amp; Private</strong>
+          <span>Your data is always protected</span>
+        </div>
+      </div>
+      <div class="float-card">
+        <div class="float-card-icon">📅</div>
+        <div class="float-card-text">
+          <strong>Easy Rescheduling</strong>
+          <span>Change your slot anytime</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="services-section" id="services-section">
+  <div class="section-inner">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">Our Medical Services</h2>
+    <p class="section-sub">Comprehensive healthcare delivered by experienced professionals</p>
+    <div class="services-showcase">
+      <div class="showcase-card">
+        <div class="showcase-icon">🩺</div>
+        <h3>General Medicine</h3>
+        <p>Comprehensive health check-ups, illness diagnosis, and personalised treatment plans.</p>
+      </div>
+      <div class="showcase-card">
+        <div class="showcase-icon">🦷</div>
+        <h3>Dental Care</h3>
+        <p>Routine check-ups, cleaning, fillings, and cosmetic dental procedures.</p>
+      </div>
+      <div class="showcase-card">
+        <div class="showcase-icon">👁️</div>
+        <h3>Eye Care</h3>
+        <p>Vision testing, prescription glasses, and treatment of eye conditions.</p>
+      </div>
+      <div class="showcase-card">
+        <div class="showcase-icon">🔬</div>
+        <h3>Diagnostics</h3>
+        <p>Blood tests, urine analysis, and complete pathology services on-site.</p>
+      </div>
+      <div class="showcase-card">
+        <div class="showcase-icon">👶</div>
+        <h3>Child Health</h3>
+        <p>Paediatric care, growth monitoring, vaccinations, and wellness checks.</p>
+      </div>
+      <div class="showcase-card">
+        <div class="showcase-icon">🏃</div>
+        <h3>Physiotherapy</h3>
+        <p>Rehabilitation, sports injuries, pain management, and mobility improvement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING SECTION -->
+<section class="booking-section" id="booking-section">
+  <div class="section-inner">
+    <div class="section-label">Online Booking</div>
+    <h2 class="section-title">Book Your Appointment</h2>
+    <p class="section-sub">Complete the form below — it takes under 3 minutes</p>
+
+    <!-- PROGRESS STEPS -->
+    <div class="progress-bar" id="progressBar">
+      <div class="progress-fill" id="progressFill" style="width:25%"></div>
+    </div>
+    <div class="step-track">
+      <div class="step-item active" id="track1">
+        <div class="step-circle">1</div>
+        <span>Service</span>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item" id="track2">
+        <div class="step-circle">2</div>
+        <span>Date &amp; Time</span>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item" id="track3">
+        <div class="step-circle">3</div>
+        <span>Details</span>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-item" id="track4">
+        <div class="step-circle">4</div>
+        <span>Confirm</span>
+      </div>
+    </div>
+
+    <!-- BOOKING CARD -->
+    <div class="booking-card">
+
+      <!-- STEP 1 -->
+      <div class="step-panel active" id="panel1">
+        <div class="panel-header">
+          <h3>Select a Service</h3>
+          <p>Choose the type of appointment you need today</p>
+        </div>
+        <div class="panel-body">
+          <div class="doctor-filter">
+            <label class="filter-label">Filter by Doctor / Department</label>
+            <select id="doctorFilter" onchange="filterServices()">
+              <option value="all">All Departments</option>
+              <option value="general">General Medicine — Dr. Sharma</option>
+              <option value="dental">Dental — Dr. Mehta</option>
+              <option value="eye">Eye Care — Dr. Verma</option>
+              <option value="lab">Diagnostics — Lab Team</option>
+              <option value="child">Child Health — Dr. Gupta</option>
+              <option value="physio">Physiotherapy — Dr. Rao</option>
+            </select>
+          </div>
+          <div class="service-grid" id="serviceGrid">
+            <div class="service-tile" data-dept="general" onclick="selectService(this,'General Consultation','Dr. Sharma','₹400','30 min','🩺')">
+              <div class="tile-icon">🩺</div>
+              <div class="tile-body">
+                <h4>General Consultation</h4>
+                <p>Health check-up &amp; illness advice</p>
+                <div class="tile-meta">
+                  <span class="tile-doctor">Dr. Sharma</span>
+                  <span class="tile-price">₹400 · 30 min</span>
+                </div>
+              </div>
+              <div class="tile-check">✓</div>
+            </div>
+            <div class="service-tile" data-dept="general" onclick="selectService(this,'Specialist Referral','Dr. Sharma','₹600','45 min','👨‍⚕️')">
+              <div class="tile-icon">👨‍⚕️</div>
+              <div class="tile-body">
+                <h4>Specialist Referral</h4>
+                <p>Referral &amp; specialist review</p>
+                <div class="tile-meta">
+                  <span class="tile-doctor">Dr. Sharma</span>
+                  <span class="tile-price">₹600 · 45 min</span>
+                </div>
+              </div>
+              <div class="tile-check">✓</div>
+            </div>
+            <div class="service-tile" data-dept="dental" onclick="selectService(this,'Dental Check-up','Dr. Mehta','₹550','40 min','🦷')">
+              <div class="tile-icon">🦷</div>
+              <div class="tile-body">
+                <h4>Dental Check-up</h4>
+                <p>Oral examination &amp; cleaning</p>
+                <div class="tile-meta">
+                  <span class="tile-doctor">Dr. Mehta</span>
+                  <span class="tile-price">₹550 · 40 min</span>
+                </div>
+              </div>
+              <div class="tile-check">✓</div>
+            </div>
+            <div class="service-tile" data-dept="dental" onclick="selectService(this,'Dental X-Ray','Dr. Mehta','₹800','30 min','🦷')">
+              <div class="tile-icon">🦷</div>
+              <div class="tile-body">
+                <h4>Dental X-Ray &amp; Review</h4>
+                <p>Full dental imaging and review</p>
+                <div class="tile-meta">
+                  <span class="tile-doctor">Dr. Mehta</span>
+                  <span class="tile-price">₹800 · 30 min</span>
+                </div>
+              </div>
+              <div class="tile-check">✓</div>
+            </div>
+            <div class="service-tile" data-dept="eye" onclick="selectService(this,'Eye Examination','Dr. Verma','₹500','35 min','👁️')">
+              <div class="tile-icon">👁️</div>
+              <div class="tile-body">
+                <h4>Eye Examination</h4>
+                <p>Vision &amp; eye health check</p>
+                <div class="tile-meta">
+                  <span class="tile-doctor">Dr. Verma</span>
+                  <span class="tile-price">₹500 · 35 min</span>
+                </div>
+              </div>
+              <div class="tile-check">✓</div>
+            </div>
+            <div class="service-tile" data-dept="lab" onclick="selectService(this,'Blood Test / Lab Work','Lab Team','₹300','20 min','🔬')">
+              <div class="tile-icon">🔬</div>
+              <div class="tile-body">
+                <h4>Blood Test / Lab Work</h4>
+                <p>Complete pathology &amp; diagnostics</p>
+                <div class="tile-meta">
+                  <span class="tile-doctor">Lab Team</span>
+                  <span class="tile-price">₹300 · 20 min</span>
+                </div>
+              </div>
+              <div class="tile-check">✓</div>
+            </div>
+            <div class="service-tile" data-dept="child" onclick="selectService(this,'Child Health Check','Dr. Gupta','₹450','30 min','👶')">
+              <div class="tile-icon">👶</div>
+              <div class="tile-body">
+                <h4>Child Health Check</h4>
+                <p>Paediatric wellness &amp; vaccines</p>
+                <div class="tile-meta">
+                  <span class="tile-doctor">Dr. Gupta</span>
+                  <span class="tile-price">₹450 · 30 min</span>
+                </div>
+              </div>
+              <div class="tile-check">✓</div>
+            </div>
+            <div class="service-tile" data-dept="general" onclick="selectService(this,'Vaccination','Dr. Sharma','₹350','15 min','💉')">
+              <div class="tile-icon">💉</div>
+              <div class="tile-body">
+                <h4>Vaccination</h4>
+                <p>Routine &amp; travel immunisation</p>
+                <div class="tile-meta">
+                  <span class="tile-doctor">Dr. Sharma</span>
+                  <span class="tile-price">₹350 · 15 min</span>
+                </div>
+              </div>
+              <div class="tile-check">✓</div>
+            </div>
+            <div class="service-tile" data-dept="physio" onclick="selectService(this,'Physiotherapy Session','Dr. Rao','₹700','60 min','🏃')">
+              <div class="tile-icon">🏃</div>
+              <div class="tile-body">
+                <h4>Physiotherapy Session</h4>
+                <p>Rehabilitation &amp; pain management</p>
+                <div class="tile-meta">
+                  <span class="tile-doctor">Dr. Rao</span>
+                  <span class="tile-price">₹700 · 60 min</span>
+                </div>
+              </div>
+              <div class="tile-check">✓</div>
+            </div>
+            <div class="service-tile" data-dept="general" onclick="selectService(this,'Health Package — Full Body','Dr. Sharma','₹2,500','90 min','❤️')">
+              <div class="tile-icon">❤️</div>
+              <div class="tile-body">
+                <h4>Health Package — Full Body</h4>
+                <p>Complete annual health screening</p>
+                <div class="tile-meta">
+                  <span class="tile-doctor">Multi-specialist</span>
+                  <span class="tile-price">₹2,500 · 90 min</span>
+                </div>
+              </div>
+              <div class="tile-check">✓</div>
+            </div>
+          </div>
+          <div class="selected-service-bar" id="selectedBar" style="display:none">
+            <span id="selectedBarText"></span>
+            <button class="btn-primary" onclick="goStep(2)">Continue to Date &amp; Time →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step-panel" id="panel2">
+        <div class="panel-header">
+          <h3>Choose Date &amp; Time</h3>
+          <p>Select an available slot — slots marked in green are open for booking</p>
+        </div>
+        <div class="panel-body">
+          <div class="calendar-layout">
+            <div class="calendar-col">
+              <div class="cal-nav-row">
+                <button class="cal-arrow" onclick="prevMonth()">‹</button>
+                <h4 class="cal-month-title" id="calMonthTitle">April 2026</h4>
+                <button class="cal-arrow" onclick="nextMonth()">›</button>
+              </div>
+              <div class="cal-grid-wrap">
+                <div class="cal-dow-row">
+                  <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                </div>
+                <div class="cal-days" id="calDays"></div>
+              </div>
+              <div class="cal-legend">
+                <div class="leg-item"><span class="leg-dot available"></span> Available</div>
+                <div class="leg-item"><span class="leg-dot today-dot"></span> Today</div>
+                <div class="leg-item"><span class="leg-dot selected-dot"></span> Selected</div>
+                <div class="leg-item"><span class="leg-dot full-dot"></span> Fully booked</div>
+              </div>
+            </div>
+            <div class="timeslot-col">
+              <div class="timeslot-header" id="timeslotHeader">
+                <h4>Select a date first</h4>
+                <p>Available appointment slots will appear here</p>
+              </div>
+              <div class="timeslot-grid" id="timeslotGrid"></div>
+              <div class="slot-legend">
+                <div class="leg-item"><span class="leg-swatch open"></span> Available</div>
+                <div class="leg-item"><span class="leg-swatch booked-sw"></span> Booked</div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-actions">
+            <button class="btn-ghost" onclick="goStep(1)">← Back</button>
+            <button class="btn-primary" id="step2Next" onclick="goStep(3)" disabled>Continue →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step-panel" id="panel3">
+        <div class="panel-header">
+          <h3>Your Personal Details</h3>
+          <p>Please fill in your information accurately for our records</p>
+        </div>
+        <div class="panel-body">
+          <div class="wa-info-bar">
+            <span class="wa-icon">💬</span>
+            <div>
+              <strong>WhatsApp Confirmation</strong>
+              <span>Enter your WhatsApp number to receive an instant booking confirmation and reminders.</span>
+            </div>
+          </div>
+          <form id="patientForm" onsubmit="return false">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name <span class="req">*</span></label>
+                <input type="text" id="fname" placeholder="e.g. Rajesh" autocomplete="given-name" oninput="validateStep3()"/>
+                <span class="field-err" id="fnameErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name <span class="req">*</span></label>
+                <input type="text" id="lname" placeholder="e.g. Kumar" autocomplete="family-name" oninput="validateStep3()"/>
+                <span class="field-err" id="lnameErr"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" autocomplete="bday"/>
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender">
+                  <option value="">Prefer not to say</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">WhatsApp Mobile Number <span class="req">*</span></label>
+                <input type="tel" id="phone" placeholder="+91 98765 43210" autocomplete="tel" oninput="validateStep3()"/>
+                <span class="field-hint">Include country code, e.g. +91 for India</span>
+                <span class="field-err" id="phoneErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="your@email.com" autocomplete="email"/>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label for="symptoms">Reason for Visit / Symptoms</label>
+              <textarea id="symptoms" rows="3" placeholder="Briefly describe your symptoms or the reason for your visit..."></textarea>
+            </div>
+            <div class="form-group full">
+              <label for="meds">Current Medications or Allergies</label>
+              <input type="text" id="meds" placeholder="e.g. Penicillin allergy; taking Metformin 500mg daily"/>
+            </div>
+            <div class="form-group full">
+              <label for="emergency">Emergency Contact Name &amp; Number</label>
+              <input type="text" id="emergency" placeholder="e.g. Priya Kumar — +91 98765 00000"/>
+            </div>
+            <div class="form-group full">
+              <label class="checkbox-label">
+                <input type="checkbox" id="consent" onchange="validateStep3()"/>
+                <span>I agree to the <a href="#" class="link-text">Privacy Policy</a> and consent to my data being stored for appointment purposes. <span class="req">*</span></span>
+              </label>
+            </div>
+          </form>
+          <div class="panel-actions">
+            <button class="btn-ghost" onclick="goStep(2)">← Back</button>
+            <button class="btn-primary" id="step3Next" onclick="goStep(4)" disabled>Review Booking →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="step-panel" id="panel4">
+        <div class="panel-header">
+          <h3>Review &amp; Confirm</h3>
+          <p>Please verify all details before confirming your appointment</p>
+        </div>
+        <div class="panel-body" id="reviewBody">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="step-panel" id="panelSuccess">
+        <div class="success-wrap">
+          <div class="success-circle">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="26" cy="26" r="25" stroke="#0F6E56" stroke-width="2"/>
+              <path d="M14 26l8 8 16-16" stroke="#0F6E56" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>Appointment Confirmed!</h2>
+          <p class="success-sub">Your booking is confirmed. Please check your WhatsApp for the confirmation message.</p>
+          <div class="conf-summary" id="confSummary"></div>
+          <div class="wa-reminder-box">
+            <div class="wa-reminder-icon">💬</div>
+            <div>
+              <strong>WhatsApp Reminders Scheduled</strong>
+              <p>You'll receive a reminder 24 hours before and 1 hour before your appointment.</p>
+            </div>
+          </div>
+          <div class="success-actions">
+            <button class="btn-outline" onclick="printConfirmation()">🖨️ Print / Save</button>
+            <button class="btn-primary" onclick="resetAll()">Book Another Appointment</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end booking-card -->
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about-section">
+  <div class="section-inner about-inner">
+    <div class="about-text">
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">Caring for Your Family<br/>Since 2005</h2>
+      <p>MediCare Clinic has been a trusted healthcare partner for thousands of families across the region. Our team of 12 experienced doctors and healthcare professionals is committed to providing compassionate, evidence-based care in a warm and welcoming environment.</p>
+      <p style="margin-top:1rem">We believe that great healthcare starts with listening — every patient is unique, and we take the time to truly understand your needs.</p>
+      <div class="about-features">
+        <div class="about-feat"><span>✓</span> NABH Accredited Facility</div>
+        <div class="about-feat"><span>✓</span> On-site Pharmacy &amp; Lab</div>
+        <div class="about-feat"><span>✓</span> Fully equipped emergency room</div>
+        <div class="about-feat"><span>✓</span> Telemedicine available</div>
+      </div>
+    </div>
+    <div class="about-hours">
+      <h3>Clinic Hours</h3>
+      <div class="hours-table">
+        <div class="hours-row"><span>Monday — Friday</span><span class="hours-time open">9:00 AM — 6:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span class="hours-time open">9:00 AM — 2:00 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span class="hours-time closed">Closed</span></div>
+      </div>
+      <div class="emergency-bar">
+        <span>🚨</span>
+        <div>
+          <strong>Emergency Line</strong>
+          <a href="tel:+911234567890">+91 12345 67890</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact-section">
+  <div class="section-inner contact-inner">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Contact &amp; Location</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h4>Address</h4>
+        <p>123 Healthcare Avenue,<br/>Thanesar, Haryana — 136118</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h4>Phone</h4>
+        <a href="tel:+911234567890">+91 12345 67890</a><br/>
+        <a href="tel:+911234567891">+91 12345 67891</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <h4>Email</h4>
+        <a href="mailto:info@medicareclinic.in">info@medicareclinic.in</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <h4>WhatsApp</h4>
+        <a href="https://wa.me/911234567890" target="_blank">+91 12345 67890</a>
+        <p style="font-size:12px;margin-top:4px;color:#718096">For general enquiries only</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="logo-mark small">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="10" fill="#0F6E56"/>
+          <path d="M20 8h-4v8H8v4h8v8h4v-8h8v-4h-8V8z" fill="white"/>
+        </svg>
+      </div>
+      <span>MediCare Clinic</span>
+    </div>
+    <p class="footer-copy">&copy; 2026 MediCare Clinic. All rights reserved. | Thanesar, Haryana</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="admin.html">Staff Login</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
